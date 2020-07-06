@@ -48,7 +48,7 @@ Real time data ingestion
 Source: [So you are thinking of taking the AWS Certified Machine Learning Specialty exam](http://thedatascience.ninja/2019/04/07/so-you-are-thinking-of-taking-the-aws-certified-machine-learning-specialty-exam/)
 
 Multiple imputation, endpoints, automatic model tuning, oversampling, undersampling
-Latent Dirichlet Allocation, Neural Topic Model, BlazingText, DeepAR, Factorization Machines, IP Insights, Linear Learner, XGBoost, Random Cut Forest, Object2Vec, K-Nearest Neighbors, multinomial classification, binomial classification, boosting, random forest, decision tree, ensemble, bag of words, n-gram, NLU
+Latent Dirichlet Allocation, Neural Topic Model, BlazingText, DeepAR, Factorization Machines, IP Insights, Linear Learner, XGBoost, Random Cut Forest, Object2Vec, K-Nearest Neighbors, boosting, random forest, decision tree, ensemble, bag of words, n-gram, NLU
 
 ##### Deep Learning keywords
 
