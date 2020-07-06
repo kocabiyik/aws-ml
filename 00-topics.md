@@ -52,21 +52,21 @@ Latent Dirichlet Allocation, Neural Topic Model, BlazingText, DeepAR, Factorizat
 
 ##### Deep Learning keywords
 
-lasso vs. ridge, layers, L1 loss, L2 loss, L1 regularization, L2 regularization
+lasso vs. ridge, L1 loss, L2 loss, L1 regularization, L2 regularization
 
 ##### Model performance measurement keywords
 
 hinge loss, precision, recall, area under the ROC curve (AUC), Log loss
 
 #### 8.Resources
-[A Cloud Guru](https://learn.acloud.guru/course/aws-certified-machine-learning-specialty/dashboard)  
-[The Safari Online AWS Machine Learning Specialty Certification Crash Course with Noah Gift](https://www.oreilly.com/live-training/courses/aws-machine-learning-specialty-certification-crash-course/0636920259589/)  
-[AWS Machine Learning Blog](https://aws.amazon.com/blogs/machine-learning/)  
-[AWS Certified Machine Learning Specialty 2020 - Hands On!](https://www.udemy.com/course/aws-machine-learning/)  
+****[A Cloud Guru](https://learn.acloud.guru/course/aws-certified-machine-learning-specialty/dashboard)  
+*[The Safari Online AWS Machine Learning Specialty Certification Crash Course with Noah Gift](https://www.oreilly.com/live-training/courses/aws-machine-learning-specialty-certification-crash-course/0636920259589/)  
+*[AWS Machine Learning Blog](https://aws.amazon.com/blogs/machine-learning/)  
+*[AWS Certified Machine Learning Specialty 2020 - Hands On!](https://www.udemy.com/course/aws-machine-learning/)  
 
 
 #### 9.Exam Duration
-65 questions
+65 questions  
 180 mins
 
 #### 10. More Tips
