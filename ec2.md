@@ -34,8 +34,21 @@ Networking has two sorf of IPs.
 When the machine reboots, it can change its IP address.  
 If assigned, the elastic IP doesn't change when the machine reboots.  
 It is not a good practice to use Elastic IPs. Alternatives:  
-1. Use load balancer
-2. Assign a DNS
+1. Use load balancer  
+2. Assign a DNS  
 
 ----
 ## EC2 User Data
+It is possible to add a set of command while launching the instance.  
+Examples: installing update, downloading files from the Internet ...
+The EC2 data are run with the root user
+
+## EC2 Instance Launch Types
+On-Demand: Available immediately, for short workload, pay what you use, billing per second (after the first minute)  
+Spot: Based on bidding  
+Reserved: Cheaper (up to 75%), minimum of one year commitment  
+* Scheduled: You use the instance in a time windows. i.e: Fridays between 10:00 - 15:00  
+* Convertible: It is possible to change the instance type  
+Dedicated Instances: No other user will not use your hardware  
+Dedicated Hosts: booking the entire physical server  
+
