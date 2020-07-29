@@ -3,6 +3,7 @@
 stands for _Elastic Computing_  
 
 ----
+
 ## Security Groups
 
 - Are like firewalls on EC2 instances.  
@@ -12,9 +13,10 @@ stands for _Elastic Computing_
 - By default, all **inbound** traffic is blocked, and **outbound** traffic is authorized.  
 - Security groups can reference other security groups.  
 
----- 
+-----
 
 ## IPv4 and IPv6
+
 Networking has two sort of IPs.
 * IPv4 is the most common one.  It is in this format: `[0-255].[0-255].[0-255].[0-255]`  
 * IPv6 is newer and mostly used in IoT applications.  
@@ -39,6 +41,7 @@ It is not a good practice to use Elastic IPs. Alternatives:
 2. Assign a DNS  
 
 ----
+
 ## EC2 User Data
 It is possible to add a set of commands while launching an instance.  
 Examples: installing update, downloading files from the Internet ...
@@ -56,6 +59,8 @@ More on spot instances:
 - Canceling the spot request doesn't mean canceling or terminating the EC2 instance.  
 - Spot Fleets: set of spot instances + on-demand instances(optional)  
 
+-----
+
 ### Instance Types
 - r: RAM-focused
 - c: CPU
@@ -68,6 +73,8 @@ What is burstable instances?
 When there is a significant load, then the CPU performance increases, it uses a credit. When the credit is over, then CPU performance goes down. If there is not a load, credit accumulates.  
 This is good, if there could be an unexpected traffic.  
 T2/T3 Unlimited: You pay an extra amount of money, but don't lose performance if you go over your credit balance. Better to monitor to avoid high unexpected costs.  
+
+-----
 
 ### AMI
 Stands for Amazon Machine Images, images are preconfigured systems, It can contain preinstalled software and updates.  
@@ -84,10 +91,15 @@ eg: Amazon Linux 2, Deep Learning AMI, etc.
 - You can't copy an AMI if it is associated with a Billing Product.  
 - For example, if it is a Windows AMI, first you launch the instance and then copy the AMI.  
 
+
+-----
+
 ### Placement Groups
 * Cluster: low latency instance group in a single AZ.  
 * Spread: Can span multiple AZ. Reduces the risk of a simultaneous failure  
 * Partition  
+
+-----
 
 ### Elastic Network Interfaces
 Represents a virtual network card.  
@@ -100,15 +112,20 @@ Represents a virtual network card.
 - The saved data is encrypted.  
 - Use cases: long-running processes, saving the ram state, services that take time to initialize.  
 
+-----
+
 ### Scalability & High Availability
  
-** Scalability** means that the system can handle when there is a high load.  
+**Scalability** means that the system can handle when there is a high load.  
 * Vertical Scalability: increasing the size of the instance. Eg: t2.micro > t2.large. Use case: non-distributed DBs. There is a limit for the scaling because of the hardware limit.  
 * Horizontal Scalability: adding new instances in case of high loads. So there exists a distributed system.  
 
 **Availability** means the system is running at least two different AZ. The objective is avoiding data loss.  
 
+-----
+
 ## Load Balancing
+
 Load balancers are servers that forward traffic to multiple servers.  
 
 Why using a load balancer?  
@@ -124,6 +141,8 @@ Three types:
 - Classic Load Balancing  
 - Application Load Balancing  
 - Network Load Balancing  
+
+-----
 
 ## Auto Scaling
 
