@@ -5,31 +5,31 @@ stands for _Elastic Computing_
 ----
 ## Security Groups
 
-- are like firewalls on EC2 instances.  
-- can be attached to several instances.  
-- are not in the EC2 instances. If the traffic is blocked, EC2 instances will not see it.  
+- Are like firewalls on EC2 instances.  
+- It can be attached to several instances.  
+- Are not in the EC2 instances. If the traffic is blocked, EC2 instances will not see it.  
 - If the application is not accessible (time out), then it is a security group issue.  
-- By default, all **inbound** traffic are blocked and **outbound** traffic is authorised.  
+- By default, all **inbound** traffic is blocked, and **outbound** traffic is authorized.  
 - Security groups can reference other security groups.  
 
 ---- 
 
 ## IPv4 and IPv6
-Networking has two sorf of IPs.
+Networking has two sort of IPs.
 * IPv4 is the most common one.  It is in this format: `[0-255].[0-255].[0-255].[0-255]`  
 * IPv6 is newer and mostly used in IoT applications.  
 
-## Public IP vs Private IP
+## Public IP vs. Private IP
 
 ### Public IP
-- The machine can be found on the internet.  
-- must unique on the web. Two machines can't have the same IPs.  
-- can easily be geo-located.  
+- The instance can be found on the Internet.  
+- Must be unique on the web. Two instances can't have the same IPs.  
+- Can easily be geo-located.  
 
 ### Private IP
 - Machine can only be identified in a private network.  
-- must be unique in the private network.  
-- two machines can have time same ips in different private networks.  
+- Must be unique in the private network.  
+- Two instances can have time same IPs in different private networks.  
 
 ### Elastic IP
 When the machine reboots, it can change its IP address.  
@@ -40,29 +40,29 @@ It is not a good practice to use Elastic IPs. Alternatives:
 
 ----
 ## EC2 User Data
-It is possible to add a set of command while launching the instance.  
+It is possible to add a set of commands while launching an instance.  
 Examples: installing update, downloading files from the Internet ...
-The EC2 data are run with the root user
+The EC2 data are run with the root user.  
 
 ## EC2 Instance Launch Types
 On-Demand: Available immediately, for short workload, pay what you use, billing per second (after the first minute)  
-Reserved: Cheaper (up to 75%), minimum of one year commitment  
-* Scheduled: You use the instance in a time windows. i.e: Fridays between 10:00 - 15:00  
+Reserved: Cheaper (up to 75%), minimum of a one-year commitment  
+* Scheduled: You use the instance in time windows. i.e: Fridays between 10:00 - 15:00  
 * Convertible: It is possible to change the instance type  
 Dedicated Instances: No other user will not use your hardware  
 Dedicated Hosts: booking the entire physical server  
-Spot: Based on bidding  
+Spot: Based on a bidding  
 More on spot instances:  
-- Cancelling the spot request doesn't mean cancelling or terminating the EC2 instance.  
-- Spot Fleeds: set of spot instances + on-demand instances(optional)  
+- Canceling the spot request doesn't mean canceling or terminating the EC2 instance.  
+- Spot Fleets: set of spot instances + on-demand instances(optional)  
 
 ### Instance Types
-- r: ram-focused
-- c: cpu
-- t: medium 
+- r: RAM-focused
+- c: CPU
+- m: medium 
 - i: IO
 - g: GPU
-- t: burstable instances
+- t: Burstable instances
 
 What is burstable instances?  
 When there is a significant load, then the CPU performance increases, it uses a credit. When the credit is over, then CPU performance goes down. If there is not a load, credit accumulates.  
@@ -70,11 +70,11 @@ This is good, if there could be an unexpected traffic.
 T2/T3 Unlimited: You pay an extra amount of money, but don't lose performance if you go over your credit balance. Better to monitor to avoid high unexpected costs.  
 
 ### AMI
-stands for Amazon Machine Images, images are preconfigured systems, it can contain preinstalled softwares and updates.  
-eg: Amazon Linux 2, Deep Learning AMI etc.  
-- AMIs are built for specific region  
+Stands for Amazon Machine Images, images are preconfigured systems, It can contain preinstalled software and updates.  
+eg: Amazon Linux 2, Deep Learning AMI, etc.  
+- AMIs are built for a specific region  
 - AMIs are published in Amazon Marketplace
-- Warning: AMIs can contain malwares. Don't use the AMI you don't trust.  
+- Warning: AMIs can contain malware. Don't use the AMI you don't trust.  
 - AMIs are stored in S3.  
 - By default, AMIs are private, lock for an account and region  
 - You can make it public, or list in Amazon Marketplace  
@@ -82,7 +82,7 @@ eg: Amazon Linux 2, Deep Learning AMI etc.
 **Cross Account AMI Copy**  
 - AMI can be copied across regions and accounts  
 - You can't copy an AMI if it is associated with a Billing Product.  
-- For example, if it is a Windows AMI, first you launch the instacne and then copy the AMI.  
+- For example, if it is a Windows AMI, first you launch the instance and then copy the AMI.  
 
 ### Placement Groups
 * Cluster: low latency instance group in a single AZ.  
@@ -90,21 +90,21 @@ eg: Amazon Linux 2, Deep Learning AMI etc.
 * Partition  
 
 ### Elastic Network Interfaces
-represents a virtual network card.  
+Represents a virtual network card.  
 * You can attach it to instances on the fly.  
 * Bound to a specific AZ.  
 
 ### EC2 Hibernate
 - Saving the RAM state to an EBS  
 - Next time, it will boot faster  
-- The saved data is encyrited.  
-- Use cases: long running processes, saving the ram state, services that take time to initialize.  
+- The saved data is encrypted.  
+- Use cases: long-running processes, saving the ram state, services that take time to initialize.  
 
-### Scalibility & High Availability
+### Scalability & High Availability
  
-** Scalibility** means that the system can handle when there is a high load.  
-* Vertical Scalibility: increasing the size of the instance. Eg: t2.micro > t2.large. Use case: non-distributed DBs. There is a limit for the scaling because of hardware limit.  
-* Horizontal Scalibility: adding new instances in case of high loads. So there exists a distributed system.  
+** Scalability** means that the system can handle when there is a high load.  
+* Vertical Scalability: increasing the size of the instance. Eg: t2.micro > t2.large. Use case: non-distributed DBs. There is a limit for the scaling because of the hardware limit.  
+* Horizontal Scalability: adding new instances in case of high loads. So there exists a distributed system.  
 
 **Availability** means the system is running at least two different AZ. The objective is avoiding data loss.  
 
@@ -114,13 +114,13 @@ Load balancers are servers that forward traffic to multiple servers.
 Why using a load balancer?  
 * Spreading load to multiple instances  
 * Expose a single point of access  
-* Seamlessly handle downsteams in the instances.  
-* Do regular health checks. If the response is not 200, then LB does't forward traffic to unhealthy instance.  
+* Seamlessly handle downsteam in the instances.  
+* Do regular health checks. If the response is not 200, then LB doesn't forward traffic to unhealthy instances.  
 * Enforce stickiness  
 * High availability across AZ.  
 * Separate public traffic from private.  
 
-3 types:  
+Three types:  
 - Classic Load Balancing  
 - Application Load Balancing  
 - Network Load Balancing  
