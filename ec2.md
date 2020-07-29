@@ -91,7 +91,6 @@ eg: Amazon Linux 2, Deep Learning AMI, etc.
 - You can't copy an AMI if it is associated with a Billing Product.  
 - For example, if it is a Windows AMI, first you launch the instance and then copy the AMI.  
 
-
 -----
 
 ### Placement Groups
