@@ -10,6 +10,7 @@ stands for _Elastic Computing_
 - are not in the EC2 instances. If the traffic is blocked, EC2 instances will not see it.  
 - If the application is not accessible (time out), then it is a security group issue.  
 - By default, all **inbound** traffic are blocked and **outbound** traffic is authorised.  
+- Security groups can reference other security groups.  
 
 ---- 
 
@@ -79,10 +80,27 @@ eg: Amazon Linux 2, Deep Learning AMI etc.
 - You can make it public, or list in Amazon Marketplace  
 
 **Cross Account AMI Copy**  
+- AMI can be copied across regions and accounts  
+- You can't copy an AMI if it is associated with a Billing Product.  
+- For example, if it is a Windows AMI, first you launch the instacne and then copy the AMI.  
 
+### Placement Groups
+* Cluster: low latency instance group in a single AZ.  
+* Spread: Can span multiple AZ. Reduces the risk of a simultaneous failure  
+* Partition  
 
+### Elastic Network Interfaces
+represents a virtual network card.  
+* You can attach it to instances on the fly.  
+* Bound to a specific AZ.  
 
+### EC2 Hibernate
+- Saving the RAM state to an EBS  
+- Next time, it will boot faster  
+- The saved data is encyrited.  
+- Use cases: long running processes, saving the ram state, services that take time to initialize.  
 
+## Scalibility & High Availability
 
 
 
