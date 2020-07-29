@@ -45,10 +45,63 @@ The EC2 data are run with the root user
 
 ## EC2 Instance Launch Types
 On-Demand: Available immediately, for short workload, pay what you use, billing per second (after the first minute)  
-Spot: Based on bidding  
 Reserved: Cheaper (up to 75%), minimum of one year commitment  
 * Scheduled: You use the instance in a time windows. i.e: Fridays between 10:00 - 15:00  
 * Convertible: It is possible to change the instance type  
 Dedicated Instances: No other user will not use your hardware  
 Dedicated Hosts: booking the entire physical server  
+Spot: Based on bidding  
+More on spot instances:  
+- Cancelling the spot request doesn't mean cancelling or terminating the EC2 instance.  
+- Spot Fleeds: set of spot instances + on-demand instances(optional)  
+
+### Instance Types
+- r: ram-focused
+- c: cpu
+- t: medium 
+- i: IO
+- g: GPU
+- t: burstable instances
+
+What is burstable instances?  
+When there is a significant load, then the CPU performance increases, it uses a credit. When the credit is over, then CPU performance goes down. If there is not a load, credit accumulates.  
+This is good, if there could be an unexpected traffic.  
+T2/T3 Unlimited: You pay an extra amount of money, but don't lose performance if you go over your credit balance. Better to monitor to avoid high unexpected costs.  
+
+### AMI
+stands for Amazon Machine Images, images are preconfigured systems, it can contain preinstalled softwares and updates.  
+eg: Amazon Linux 2, Deep Learning AMI etc.  
+- AMIs are built for specific region  
+- AMIs are published in Amazon Marketplace
+- Warning: AMIs can contain malwares. Don't use the AMI you don't trust.  
+- AMIs are stored in S3.  
+- By default, AMIs are private, lock for an account and region  
+- You can make it public, or list in Amazon Marketplace  
+
+**Cross Account AMI Copy**  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
