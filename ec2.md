@@ -100,11 +100,32 @@ represents a virtual network card.
 - The saved data is encyrited.  
 - Use cases: long running processes, saving the ram state, services that take time to initialize.  
 
-## Scalibility & High Availability
+### Scalibility & High Availability
+ 
+** Scalibility** means that the system can handle when there is a high load.  
+* Vertical Scalibility: increasing the size of the instance. Eg: t2.micro > t2.large. Use case: non-distributed DBs. There is a limit for the scaling because of hardware limit.  
+* Horizontal Scalibility: adding new instances in case of high loads. So there exists a distributed system.  
 
+**Availability** means the system is running at least two different AZ. The objective is avoiding data loss.  
 
+## Load Balancing
+Load balancers are servers that forward traffic to multiple servers.  
 
+Why using a load balancer?  
+* Spreading load to multiple instances  
+* Expose a single point of access  
+* Seamlessly handle downsteams in the instances.  
+* Do regular health checks. If the response is not 200, then LB does't forward traffic to unhealthy instance.  
+* Enforce stickiness  
+* High availability across AZ.  
+* Separate public traffic from private.  
 
+3 types:  
+- Classic Load Balancing  
+- Application Load Balancing  
+- Network Load Balancing  
+
+## Auto Scaling
 
 
 
