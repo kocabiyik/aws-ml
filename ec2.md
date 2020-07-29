@@ -144,11 +144,21 @@ Three types:
 -----
 
 ## Auto Scaling
+- Scale out the number of instances as needed.  
+- Possible by defining a minimum and maximum instance.  
+- Automatically register new instances to the load balancer.  
+- ASG is free. You only pay for the underlining resources.  
+- AGS creates new instances if any of the instance is terminated for any reason.  
+- AGS can terminate an instace if the LB marks it as unhealthy.  
 
+Three types:
+- Target Tracking Scaling: e.g:  If CPU usage exceeds % 70, than add one instance.  
+- Simple / Step Scaling: e.g:  if Cloud watch alarm exceeds %80, than add two instances.  
+- Scheduled Actions: e.g: On Mondays between 10:00 and 13:00 add 3 intances.  
 
+-----
 
-
-
+## EBS / EFS
 
 
 
