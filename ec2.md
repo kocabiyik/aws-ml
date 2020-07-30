@@ -159,6 +159,17 @@ Three types:
 -----
 
 ## EBS / EFS
+## EBS / EFS
+EBS: Elastic Block Store. It is a network drive that can be attached to the instances.  
+It can be detached from one instance to anohter.  
+
+Four types:  
+GP2: General purpose, price-perfomance choice. SSD.  
+IOI: Highest performance SSD volume with low latency.  
+STI: Low cost, HDD, frequently accessed data.  
+SCI: Low cost, HDD, for less frequently accessed data.  
+
+Only GP2 and IOI are used as boot volumes.  
 
 
 
