@@ -159,7 +159,6 @@ Three types:
 -----
 
 ## EBS / EFS
-## EBS / EFS
 EBS: Elastic Block Store. It is a network drive that can be attached to the instances.  
 It can be detached from one instance to anohter.  
 
@@ -171,10 +170,13 @@ SCI: Low cost, HDD, for less frequently accessed data.
 
 Only GP2 and IOI are used as boot volumes.  
 
-
-
-
-
+EFS: Elastic file system.  
+Use cases: content management, web serving, WordPress...  
+Uses security group to access to EFS  
+Compatible with Linux  
+POSIX file system  
+Scales automatically, pay-per-use  
+Can be mounted several instances at the same time.  
 
 
 
