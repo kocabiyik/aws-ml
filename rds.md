@@ -29,4 +29,11 @@ However, to encrypt an unencrypted DB, first you should take a encrypted snapsho
 - Supports multiple AZ.  
 - There is writer endpoint and reder endpoints.  
 - Serverless: Less instances when there is not high load. And more, when there is.  
--
+
+## ElastiCache
+- Objective: Saving RDS from high load, high response time.  
+- In memory databases. High-performant, low latency  
+- Two types: Redis, Mamcached  
+- ElastiCache requires significant code change in the application.  
+- Lazy Loading: check the Cache first. If available, use it. If not, get it from RDS and write it to cache.  
+
